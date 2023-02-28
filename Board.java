@@ -28,11 +28,6 @@ public class Board
 	{
 		this.board[x][y] = (byte)1;
 	}
-	//set a given coordinate to dead
-	public void setDead(int x, int y)
-	{
-		this.board[x][y] = (byte)0;
-	}
 	//count alive neighbours of a given coordinate
 	public byte countAliveNeighbours(int x, int y)
 	{
@@ -122,7 +117,7 @@ public class Board
 		//set some board elements to alive state
 		System.out.println("Do you want to set board states randomly? (Y/N)");
 		char ans = sc.next().charAt(0);
-		if(ans == 'Y')
+		if(ans == 'Y' || ans == 'y')
 		{
 			b1.setRandomAlive(b1);
 		}
